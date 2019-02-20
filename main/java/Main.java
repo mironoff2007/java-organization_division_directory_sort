@@ -12,6 +12,7 @@ public class Main {
                     "“K2\\SK1\\SSK1”\n" +
                     "“K2\\SK1\\SSK2”\n”" +
                     "“K2\\SK1\\SSK2";
+
             s=s.replaceAll("“","");
             s=s.replaceAll("”","");
             String [] arr=s.split("\n");
