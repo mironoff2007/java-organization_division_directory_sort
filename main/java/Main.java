@@ -1,5 +1,5 @@
 
-public class Main {
+class Main {
 
 
         public static void main(String[] args)
@@ -10,18 +10,20 @@ public class Main {
                     "“K1\\SK1\\SSK2”\n" +
                     "“K2”\n" +
                     "“K2\\SK1\\SSK1”\n" +
-                    "“K2\\SK1\\SSK2”\n”" +
                     "“K2\\SK1\\SSK2";
 
             s=s.replaceAll("“","");
             s=s.replaceAll("”","");
             String [] arr=s.split("\n");
+
             OrganizationDivisionSorter sorter=new OrganizationDivisionSorter(arr);
+
             sorter.printAll();
 
-            arr=sorter.getDivisions();
+            arr=sorter.getDivisionsArray();
 
-            System.out.println(arr);
+
+
             
 
         }

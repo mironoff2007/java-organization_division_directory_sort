@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.TreeSet;
 
@@ -10,6 +9,7 @@ class OrganizationDivisionSorter {
         @Override
         public int compare(String o1, String o2) {
 
+            //main division
             String s1;
             if(o1.indexOf('\\')>0){s1=o1.substring(0,o1.indexOf('\\'));}
             else s1=o1;
@@ -17,6 +17,8 @@ class OrganizationDivisionSorter {
             String s2;
             if(o2.indexOf('\\')>0){s2=o2.substring(0,o2.indexOf('\\'));}
             else s2=o2;
+
+            //hierarchy length
             int l1= (int) o1.chars().filter(ch->ch=='\\').count();
             int l2= (int) o2.chars().filter(ch->ch=='\\').count();
 
@@ -41,12 +43,6 @@ class OrganizationDivisionSorter {
         AddAllDepartments(arr);
     }
 
-    private void getMainDepartments(String[] arr){
-        for (String s:arr)
-            if (s.contains("\\")) divisions.add(s.split("\\\\")[0]);
-            else divisions.add(s);
-
-    }
     private void AddAllDepartments(String[] arr){
 
         for (String s:arr)
@@ -69,7 +65,7 @@ class OrganizationDivisionSorter {
         divisions.forEach(System.out::println);
     }
 
-    public String [] getDivisions() {
+    public String [] getDivisionsArray() {
         return  divisions.toArray(new String[divisions.size()]);
     }
 }
