@@ -68,4 +68,8 @@ class OrganizationDivisionSorter {
     public void printAll(){
         divisions.forEach(System.out::println);
     }
+
+    public String [] getDivisions() {
+        return  divisions.toArray(new String[divisions.size()]);
+    }
 }

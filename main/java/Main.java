@@ -18,6 +18,10 @@ public class Main {
             String [] arr=s.split("\n");
             OrganizationDivisionSorter sorter=new OrganizationDivisionSorter(arr);
             sorter.printAll();
+
+            arr=sorter.getDivisions();
+
+            System.out.println(arr);
             
 
         }
